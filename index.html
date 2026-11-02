@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ОАО «БМЗ» — Белорусский металлургический завод</title>
+<link rel="icon" type="image/png" href="images/bmz-logo.png">
+<link rel="shortcut icon" href="images/bmz-logo.png">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="home">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="preloader"><div class="preloader-spinner"></div></div>
+
+<header class="hdr" id="hdr"></header>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-ov"></div>
+<div class="hero-c">
+<div class="hero-tag">ЛИДЕР МЕТАЛЛУРГИЧЕСКОЙ ОТРАСЛИ СНГ</div>
+<h1>Белорусский металлургический <span>завод</span></h1>
+<p class="hero-desc">Крупнейший производитель стального проката и метизной продукции в Республике Беларусь. Более 40 лет надёжности и качества.</p>
+<div class="hero-btns">
+<a class="btn btn-p" href="catalog.html">Продукция</a>
+<a class="btn btn-o" href="about.html">О заводе</a>
+</div>
+</div>
+<div class="scroll-hint">Прокрутите вниз</div>
+</section>
+
+<section class="sec">
+<div class="container">
+<div class="stats reveal">
+<div class="stat"><div class="stat-n">40+</div><div class="stat-l">Лет на рынке</div></div>
+<div class="stat"><div class="stat-n">2,3 млн</div><div class="stat-l">Тонн стали в год</div></div>
+<div class="stat"><div class="stat-n">12 000</div><div class="stat-l">Сотрудников</div></div>
+<div class="stat"><div class="stat-n">70+</div><div class="stat-l">Стран-партнёров</div></div>
+</div>
+</div>
+</section>
+
+<section class="sec sec-alt">
+<div class="container">
+<div class="live-counter reveal">
+<div class="counter-header">
+<div class="live-dot"></div>
+<span>Производство в реальном времени</span>
+</div>
+<div class="counter-grid">
+<div class="counter-item">
+<div class="counter-value" id="counterSteel">0</div>
+<div class="counter-label">Тонн стали с 2026 года</div>
+</div>
+<div class="counter-item">
+<div class="counter-value" id="counterRebar">0</div>
+<div class="counter-label">Метров арматуры</div>
+</div>
+<div class="counter-item">
+<div class="counter-value" id="counterExport">0</div>
+<div class="counter-label">Тонн на экспорт</div>
+</div>
+<div class="counter-item">
+<div class="counter-value" id="counterCountries">0</div>
+<div class="counter-label">Стран-партнёров</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="container">
+<div class="sec-title reveal">
+<h2>Последние <span>новости</span></h2>
+<div class="line"></div>
+<p>Актуальные события и достижения предприятия</p>
+</div>
+<div class="news-grid">
+<div class="news-card reveal" onclick="openNewsModal(1)">
+<div class="news-img" style="background:linear-gradient(135deg,#2a1a10,#1a0a05)"><div class="news-date">02.10.2026</div></div>
+<div class="news-body"><div class="news-cat">Производство</div><h3>БМЗ нарастил выпуск арматуры на 8% в третьем квартале</h3><p>Объём производства стальной арматуры превысил плановые показатели.</p><div class="news-read">Читать далее →</div></div>
+</div>
+<div class="news-card reveal" onclick="openNewsModal(2)">
+<div class="news-img" style="background:linear-gradient(135deg,#0a1a2a,#050a15)"><div class="news-date">28.09.2026</div></div>
+<div class="news-body"><div class="news-cat">Экспорт</div><h3>Новый контракт на поставку метизов в Юго-Восточную Азию</h3><p>Подписан долгосрочный договор на поставку стальных канатов и проволоки.</p><div class="news-read">Читать далее →</div></div>
+</div>
+<div class="news-card reveal" onclick="openNewsModal(3)">
+<div class="news-img" style="background:linear-gradient(135deg,#1a2a1a,#0a150a)"><div class="news-date">19.09.2026</div></div>
+<div class="news-body"><div class="news-cat">Модернизация</div><h3>Запуск новой линии термической обработки проволоки</h3><p>Инвестиции в новое оборудование позволили расширить сортамент.</p><div class="news-read">Читать далее →</div></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:36px"><a class="btn btn-o btn-sm" href="news.html">Все новости</a></div>
+</div>
+</section>
+
+<div class="news-modal" id="newsModal" onclick="if(event.target===this)closeNewsModal()">
+<div class="news-modal-content">
+<button class="news-modal-close" onclick="closeNewsModal()">✕</button>
+<div class="news-modal-img" id="newsModalImg"></div>
+<div class="news-modal-body">
+<div class="news-modal-cat" id="newsModalCat"></div>
+<div class="news-modal-date" id="newsModalDate"></div>
+<h2 id="newsModalTitle"></h2>
+<div class="text" id="newsModalText"></div>
+</div>
+</div>
+</div>
+
+<button class="back-top" id="backTop" onclick="scrollToTop()">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<footer class="ftr" id="footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

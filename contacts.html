@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — ОАО «БМЗ»</title>
+<link rel="icon" type="image/png" href="images/bmz-logo.png">
+<link rel="shortcut icon" href="images/bmz-logo.png">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="contacts">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="preloader"><div class="preloader-spinner"></div></div>
+<header class="hdr" id="hdr"></header>
+
+<div class="page-hero">
+<div class="page-hero-inner">
+<div class="breadcrumbs"><a href="index.html">Главная</a><span class="sep">/</span><span class="current">Контакты</span></div>
+<h1>Свяжитесь <span>с нами</span></h1>
+<p>Мы открыты для сотрудничества и готовы ответить на ваши вопросы</p>
+</div>
+</div>
+
+<section class="sec">
+<div class="container">
+<div class="contact-grid">
+<div>
+<div class="map-wrap">
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor&amp;source=constructor&amp;ll=30.0120%2C52.8720&amp;z=16&amp;pt=30.0120,52.8720,pm2rdm&amp;text=ул.+Промышленная,+37,+Жлобин" 
+width="100%" height="100%" frameborder="0" allowfullscreen
+style="border:0;filter:grayscale(0.3) contrast(1.05) brightness(0.9)">
+</iframe>
+</div>
+<a class="route-btn" href="https://yandex.ru/maps/?rtext=52.8927,30.0250~52.8720,30.0120&rtt=auto" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+Как добраться
+</a>
+</div>
+<div class="c-form reveal">
+<h3>Напишите нам</h3>
+<form id="contactForm" onsubmit="submitForm(event)">
+<div class="fg"><label>Ваше имя</label><input required id="formName"></div>
+<div class="fg"><label>Email</label><input type="email" required id="formEmail"></div>
+<div class="fg"><label>Телефон</label><input type="tel" id="formPhone"></div>
+<div class="fg"><label>Тема</label>
+<select id="formSubject">
+<option>Общий вопрос</option>
+<option>Заказ продукции</option>
+<option>Сотрудничество</option>
+<option>Пресса</option>
+<option>Другое</option>
+</select>
+</div>
+<div class="fg"><label>Сообщение</label><textarea required id="formMsg"></textarea></div>
+<button class="btn btn-p" type="submit">Отправить</button>
+<div class="form-success" id="formSuccess">✓ Сообщение отправлено! Мы свяжемся с вами в ближайшее время.</div>
+</form>
+</div>
+</div>
+
+<div class="c-info reveal" style="margin-top:50px">
+<div class="c-item">
+<div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+<div><h4>Адрес</h4><p>247210, Республика Беларусь, Гомельская область, г. Жлобин, ул. Промышленная, 37</p></div>
+</div>
+<div class="c-item">
+<div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0122 16.92z"/></svg></div>
+<div><h4>Телефон</h4><a href="tel:+375233420000">+375 (2334) 2-00-00</a><br><a href="tel:+375233420001" style="font-size:.85rem">+375 (2334) 2-00-01 (приёмная)</a></div>
+</div>
+<div class="c-item">
+<div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+<div><h4>Email</h4><a href="mailto:info@bmz.by">info@bmz.by</a><br><a href="mailto:sales@bmz.by" style="font-size:.85rem">sales@bmz.by (отдел сбыта)</a><br><a href="mailto:zakupki@bmz.by" style="font-size:.85rem">zakupki@bmz.by (закупки)</a></div>
+</div>
+<div class="c-item">
+<div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+<div><h4>Режим работы</h4><p>Пн–Пт: 08:00–17:00<br>Сб–Вс: выходной<br>Производство — круглосуточно</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="news-modal" id="newsModal" onclick="if(event.target===this)closeNewsModal()">
+<div class="news-modal-content"><button class="news-modal-close" onclick="closeNewsModal()"></button><div class="news-modal-img" id="newsModalImg"></div><div class="news-modal-body"><div class="news-modal-cat" id="newsModalCat"></div><div class="news-modal-date" id="newsModalDate"></div><h2 id="newsModalTitle"></h2><div class="text" id="newsModalText"></div></div></div>
+</div>
+
+<button class="back-top" id="backTop" onclick="scrollToTop()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<footer class="ftr" id="footer"></footer>
+
+<script src="js/main.js"></script>
+<script src="js/search.js"></script>
+<script>
+function submitForm(e){
+e.preventDefault();
+const name = document.getElementById('formName').value;
+const email = document.getElementById('formEmail').value;
+const msg = document.getElementById('formMsg').value;
+if(!name || !email || !msg) return;
+document.getElementById('formSuccess').classList.add('show');
+document.getElementById('contactForm').reset();
+setTimeout(() => document.getElementById('formSuccess').classList.remove('show'), 5000);
+}
+</script>
+</body>
+</html>

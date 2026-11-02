@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Новость — ОАО «БМЗ»</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="press">
+
+<div class="preloader"><div class="preloader-spinner"></div></div>
+<header class="hdr" id="hdr"></header>
+
+<div class="page-hero">
+<div class="page-hero-inner">
+<div class="breadcrumbs"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Пресс-центр</a><span class="sep">/</span><span class="current" id="niCat">Новость</span></div>
+<h1 id="niTitle">Заголовок <span>новости</span></h1>
+<p id="niDate">Дата</p>
+</div>
+</div>
+
+<section class="sec">
+<div class="container" style="max-width:800px">
+<div class="reveal" id="niContent" style="font-size:1.05rem;line-height:1.8;color:var(--tx)"></div>
+<div style="margin-top:40px;padding-top:30px;border-top:1px solid var(--brd2)">
+<a class="btn btn-o btn-sm" href="news.html">← Все новости</a>
+</div>
+</div>
+</section>
+
+<button class="back-top" id="backTop" onclick="scrollToTop()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<footer class="ftr" id="footer"></footer>
+<script src="js/main.js"></script>
+<script>
+const newsData = {
+1:{cat:'Производство',date:'02 октября 2026',title:'БМЗ нарастил выпуск арматуры на 8% в третьем квартале',content:'<p>По итогам третьего квартала 2026 года ОАО «Белорусский металлургический завод» продемонстрировал уверенный рост производства ключевой продукции. Выпуск стальной арматуры увеличился на 8% по сравнению с аналогичным периодом прошлого года и составил свыше 620 тысяч тонн.</p><p>Основным фактором роста стала завершённая в начале года модернизация сортопрокатного стана «370». Обновлённое оборудование позволило не только увеличить скорость проката, но и расширить сортамент выпускаемой продукции за счёт введения новых диаметров и марок стали.</p><p>«Мы продолжаем курс на техническое перевооружение производства. Инвестиции в модернизацию уже дают ощутимый результат — растёт не только объём, но и качество продукции», — отметил главный инженер завода.</p>'},
+2:{cat:'Экспорт',date:'28 сентября 2026',title:'Новый контракт на поставку метизов в Юго-Восточную Азию',content:'<p>ОАО «БМЗ» подписало долгосрочный контракт на поставку метизной продукции в страны Юго-Восточной Азии. Соглашение рассчитано на три года и предусматривает поставку более 15 000 тонн стальных канатов и проволоки различного назначения.</p><p>Это крупнейший экспортный контракт завода в регионе за последние пять лет.</p>'},
+3:{cat:'Модернизация',date:'19 сентября 2026',title:'Запуск новой линии термической обработки проволоки',content:'<p>На метизном производстве БМЗ введена в эксплуатацию новая линия термической обработки проволоки. Проект реализован в рамках программы технической модернизации предприятия с инвестициями около 12 млн белорусских рублей.</p>'}
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || '1';
+const n = newsData[id] || newsData[1];
+document.getElementById('niCat').textContent = n.cat;
+document.getElementById('niTitle').innerHTML = n.title;
+document.getElementById('niDate').textContent = n.date;
+document.getElementById('niContent').innerHTML = n.content;
+});
+</script>
+<script src="js/search.js"></script>
+</body>
+</html>

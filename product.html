@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карточка продукции — ОАО «БМЗ»</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="products">
+
+<div class="preloader"><div class="preloader-spinner"></div></div>
+<header class="hdr" id="hdr"></header>
+
+<div class="page-hero">
+<div class="page-hero-inner">
+<div class="breadcrumbs"><a href="index.html">Главная</a><span class="sep">/</span><a href="catalog.html">Продукция</a><span class="sep">/</span><span class="current" id="prodName">Продукт</span></div>
+<h1 id="prodTitle">Название <span>продукта</span></h1>
+<p id="prodDesc">Описание продукта</p>
+</div>
+</div>
+
+<section class="sec">
+<div class="container">
+<div class="about-cols reveal">
+<div>
+<h3>Технические характеристики</h3>
+<div id="prodSpecs"></div>
+</div>
+<div>
+<h3>Применение</h3>
+<p id="prodUsage">Информация о применении продукта.</p>
+<h3 style="margin-top:24px">Стандарты</h3>
+<p id="prodStandards">ГОСТ, ISO, EN</p>
+</div>
+</div>
+<div style="text-align:center;margin-top:40px">
+<a class="btn btn-p" href="contacts.html">Запросить цену</a>
+<a class="btn btn-o" href="catalog.html" style="margin-left:12px">Вернуться к каталогу</a>
+</div>
+</div>
+</section>
+
+<div class="news-modal" id="newsModal" onclick="if(event.target===this)closeNewsModal()">
+<div class="news-modal-content"><button class="news-modal-close" onclick="closeNewsModal()">✕</button><div class="news-modal-img" id="newsModalImg"></div><div class="news-modal-body"><div class="news-modal-cat" id="newsModalCat"></div><div class="news-modal-date" id="newsModalDate"></div><h2 id="newsModalTitle"></h2><div class="text" id="newsModalText"></div></div></div>
+</div>
+
+<button class="back-top" id="backTop" onclick="scrollToTop()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<footer class="ftr" id="footer"></footer>
+<script src="js/main.js"></script>
+<script>
+// Product data
+const products = {
+1:{name:'Стальная арматура', desc:'Горячекатаная арматура различных классов прочности для строительной отрасли.', specs:['Диаметр: 6–40 мм','Классы: А-I, А-III, А-V','Сталь: 25Г2С, 35ГС','Длина: 6–12 м'], usage:'Используется в армировании железобетонных конструкций в строительстве, мостостроении, инфраструктурных проектах.', standards:'ГОСТ 34028-2016, ISO 6935-2'},
+2:{name:'Катанка и проволока', desc:'Проволока строительная, пружинная, сварочная.', specs:['Диаметр: 5,5–12 мм (катанка)','Диаметр: 0,5–6 мм (проволока)','Марки: 08кп, 65Г, 70'], usage:'Строительство, машиностроение, производство канатов и сеток.', standards:'ГОСТ 30136-94, ГОСТ 792-67'},
+3:{name:'Метизная продукция', desc:'Канаты, сетки, гвозди промышленного назначения.', specs:['Канаты: диаметр 3–60 мм','Сетки: ячейка 10–100 мм','Гвозди: 20–150 мм'], usage:'Строительство, горнодобывающая промышленность, сельское хозяйство.', standards:'ГОСТ 3062-80, ГОСТ 2715-75'},
+4:{name:'Сортовой прокат', desc:'Круг, квадрат, шестигранник для машиностроения.', specs:['Круг: Ø 12–250 мм','Квадрат: 14–150 мм','Шестигранник: 17–75 мм'], usage:'Машиностроение, автомобилестроение, производство инструментов.', standards:'ГОСТ 2590-2006, ГОСТ 2591-2006'},
+5:{name:'Крепёжные изделия', desc:'Болты, гайки, шпильки для строительства.', specs:['Болты: М6–М48','Гайки: М6–М48','Класс прочности: 4.6–10.9'], usage:'Строительство, машиностроение, металлоконструкции.', standards:'ГОСТ 7798-70, ГОСТ 5927-70'},
+6:{name:'Фасонный прокат', desc:'Уголок, швеллер, спецпрофили.', specs:['Уголок: 20–200 мм','Швеллер: 5–40','Профили по ТУ'], usage:'Строительство, машиностроение, производство конструкций.', standards:'ГОСТ 8509-93, ГОСТ 8240-97'}
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || '1';
+const p = products[id] || products[1];
+document.getElementById('prodName').textContent = p.name;
+document.getElementById('prodTitle').innerHTML = p.name;
+document.getElementById('prodDesc').textContent = p.desc;
+document.getElementById('prodSpecs').innerHTML = '<ul style="list-style:none">'+p.specs.map(s=>'<li style="padding:8px 0 8px 18px;color:var(--tx2);position:relative;border-bottom:1px solid var(--brd2)"><span style="position:absolute;left:0;color:var(--pr)">—</span>'+s+'</li>').join('')+'</ul>';
+document.getElementById('prodUsage').textContent = p.usage;
+document.getElementById('prodStandards').textContent = p.standards;
+});
+</script>
+<script src="js/search.js"></script>
+</body>
+</html>

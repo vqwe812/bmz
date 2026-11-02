@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пресс-центр — ОАО «БМЗ»</title>
+<link rel="icon" type="image/png" href="images/bmz-logo.png">
+<link rel="shortcut icon" href="images/bmz-logo.png">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="press">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="preloader"><div class="preloader-spinner"></div></div>
+<header class="hdr" id="hdr"></header>
+
+<div class="page-hero">
+<div class="page-hero-inner">
+<div class="breadcrumbs"><a href="index.html">Главная</a><span class="sep">/</span><span class="current">Пресс-центр</span></div>
+<h1>Пресс-<span>центр</span></h1>
+<p>Новости, фотоальбом, газета «Металлург»</p>
+</div>
+</div>
+
+<section class="sec">
+<div class="container">
+<div class="press-tabs reveal">
+<button class="press-tab active" onclick="filterNews('all',this)">Все</button>
+<button class="press-tab" onclick="filterNews('news',this)">Новости</button>
+<button class="press-tab" onclick="filterNews('photo',this)">Фотоальбом</button>
+<button class="press-tab" onclick="filterNews('paper',this)">Газета «Металлург»</button>
+<button class="press-tab" onclick="filterNews('video',this)">Видео</button>
+</div>
+<div id="newsContent"></div>
+</div>
+</section>
+
+<section class="sec sec-alt">
+<div class="container">
+<div class="sec-title reveal">
+<h2>Достижения и <span>награды</span></h2>
+<div class="line"></div>
+<p>Признание качества на международном уровне</p>
+</div>
+<div class="awards-carousel reveal">
+<div class="carousel-track" id="carouselTrack">
+<div class="award-card">
+<div class="award-icon">
+<svg viewBox="0 0 64 64" fill="none" stroke="var(--yl)" stroke-width="2">
+<path d="M20 8h24v8l-12 8-12-8z" fill="rgba(245,197,24,0.2)"/>
+<path d="M20 16l-8 4v8l8 4M44 16l8 4v8l-8 4"/>
+<circle cx="32" cy="32" r="8" fill="var(--yl)" stroke="var(--yl)"/>
+<path d="M28 40v16M36 40v16M24 56h16"/>
+</svg>
+</div>
+<h4>Лидер отрасли СНГ</h4>
+<p>Топ-10 металлургических предприятий по объёму экспорта, 2025</p>
+</div>
+<div class="award-card">
+<div class="award-icon">
+<svg viewBox="0 0 64 64" fill="none" stroke="var(--pr)" stroke-width="2">
+<rect x="16" y="12" width="32" height="40" rx="2" fill="rgba(212,81,30,0.1)"/>
+<path d="M24 20h16M24 28h16M24 36h10"/>
+<circle cx="32" cy="44" r="4" fill="var(--pr)"/>
+</svg>
+</div>
+<h4>ISO 9001:2015</h4>
+<p>Сертификат системы менеджмента качества</p>
+</div>
+<div class="award-card">
+<div class="award-icon">
+<svg viewBox="0 0 64 64" fill="none" stroke="var(--pr)" stroke-width="2">
+<circle cx="32" cy="32" r="20" fill="rgba(212,81,30,0.1)"/>
+<path d="M20 32c0-6 5-12 12-12s12 6 12 12"/>
+<path d="M16 40c4-6 10-10 16-10s12 4 16 10"/>
+<circle cx="32" cy="28" r="3" fill="var(--pr)"/>
+</svg>
+</div>
+<h4>Экологический стандарт</h4>
+<p>ISO 14001:2015 — экологический менеджмент</p>
+</div>
+<div class="award-card">
+<div class="award-icon">
+<svg viewBox="0 0 64 64" fill="none" stroke="var(--pr)" stroke-width="2">
+<path d="M32 12l6 12 14 2-10 10 2 14-12-6-12 6 2-14-10-10 14-2z" fill="rgba(212,81,30,0.1)"/>
+<circle cx="32" cy="32" r="4" fill="var(--pr)"/>
+</svg>
+</div>
+<h4>Инновации 2024</h4>
+<p>Премия за внедрение новых технологий производства</p>
+</div>
+<div class="award-card">
+<div class="award-icon">
+<svg viewBox="0 0 64 64" fill="none" stroke="var(--pr)" stroke-width="2">
+<path d="M20 20h24v24H20z" fill="rgba(212,81,30,0.1)"/>
+<path d="M28 28h8v8h-8z" fill="var(--pr)"/>
+<path d="M16 32h4M44 32h4M32 16v4M32 44v4"/>
+</svg>
+</div>
+<h4>Лучший экспортёр</h4>
+<p>Награда Министерства промышленности РБ, 2023</p>
+</div>
+</div>
+<div class="carousel-controls">
+<button class="carousel-btn prev" onclick="moveCarousel(-1)">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+</button>
+<button class="carousel-btn next" onclick="moveCarousel(1)">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<div class="news-modal" id="newsModal" onclick="if(event.target===this)closeNewsModal()">
+<div class="news-modal-content"><button class="news-modal-close" onclick="closeNewsModal()">✕</button><div class="news-modal-img" id="newsModalImg"></div><div class="news-modal-body"><div class="news-modal-cat" id="newsModalCat"></div><div class="news-modal-date" id="newsModalDate"></div><h2 id="newsModalTitle"></h2><div class="text" id="newsModalText"></div></div></div>
+</div>
+
+<button class="back-top" id="backTop" onclick="scrollToTop()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<footer class="ftr" id="footer"></footer>
+<script src="js/main.js"></script>
+<script src="js/search.js"></script>
+<script>
+const pressItems = [
+{id:1,type:'news',cat:'Производство',date:'02.10.2026',title:'БМЗ вошёл в топ-10 металлургических предприятий СНГ',desc:'Экспорт увеличен на 12%.',full:'<p>По итогам 2025 года завод увеличил экспортные поставки на 12%, заняв прочные позиции на рынках Азии и Ближнего Востока.</p>'},
+{id:2,type:'news',cat:'Экономика',date:'28.09.2026',title:'Итоги первого полугодия 2026 года',desc:'1,18 млн тонн стали.',full:'<p>Выпуск стали составил 1,18 млн тонн, что на 5% превышает аналогичный показатель прошлого года.</p>'},
+{id:3,type:'news',cat:'Модернизация',date:'19.09.2026',title:'Инвестиции в экологическую модернизацию',desc:'50 млн рублей.',full:'<p>Проект включает установку новых газоочистных сооружений и переход на замкнутый цикл водоснабжения.</p>'},
+{id:4,type:'news',cat:'Кадры',date:'10.09.2026',title:'Новый учебный центр для подготовки кадров',desc:'Современные тренажёры.',full:'<p>Центр оснащён современными тренажёрами и симуляторами для обучения операторов прокатных станов.</p>'},
+{id:5,type:'photo',cat:'События',date:'05.09.2026',title:'День металлурга 2026',desc:'Праздничный концерт на территории завода.',full:''},
+{id:6,type:'photo',cat:'Производство',date:'01.09.2026',title:'Производственные мощности',desc:'Панорама сталеплавильного цеха.',full:''},
+{id:7,type:'photo',cat:'Продукция',date:'25.08.2026',title:'Продукция БМЗ',desc:'Выставка металлопродукции.',full:''},
+{id:8,type:'paper',cat:'Издание',date:'15.10.2026',title:'Металлург №47 — октябрь 2026',desc:'Итоги квартала, интервью с руководством.',full:''},
+{id:9,type:'paper',cat:'Издание',date:'15.09.2026',title:'Металлург №46 — сентябрь 2026',desc:'Модернизация и новые контракты.',full:''},
+{id:10,type:'paper',cat:'Издание',date:'15.08.2026',title:'Металлург №45 — август 2026',desc:'Летние достижения завода.',full:''},
+{id:11,type:'video',cat:'Видео',date:'01.10.2026',title:'Видеоэкскурсия по заводу',desc:'Полный цикл производства.',full:''},
+{id:12,type:'video',cat:'Видео',date:'20.09.2026',title:'Как производится арматура',desc:'Технологический процесс.',full:''}
+];
+
+function renderNews(filter){
+const container = document.getElementById('newsContent');
+const filtered = filter === 'all' ? pressItems : pressItems.filter(i => i.type === filter);
+if(filter === 'photo'){
+container.innerHTML = '<div class="gallery-grid">'+filtered.map((i,idx)=>{
+const colors = ['#2a1a10','#0a1a2a','#1a2a1a','#2a2a1a','#1a1a2a','#2a1a2a'];
+return '<div class="gallery-item reveal" style="background:linear-gradient(135deg,'+colors[idx%6]+',#0a0a0a)"><div class="gallery-item-label">'+i.title+'<br><small style="color:var(--tx3);font-size:.75rem">'+i.date+'</small></div></div>';
+}).join('')+'</div>';
+} else if(filter === 'paper'){
+container.innerHTML = '<div class="newspaper-grid">'+filtered.map((i,idx)=>{
+const grads = ['linear-gradient(135deg,#2a1a10,#1a0a05)','linear-gradient(135deg,#1a1a2a,#0a0a15)','linear-gradient(135deg,#2a2a1a,#15150a)'];
+return '<div class="newspaper-card reveal"><div class="newspaper-cover" style="background:'+grads[idx%3]+'"><div class="newspaper-cover-text">МЕТАЛЛУРГ<small>'+i.date+'</small></div></div><div class="newspaper-body"><h4>'+i.title+'</h4><p>'+i.desc+'</p></div></div>';
+}).join('')+'</div>';
+} else if(filter === 'video'){
+container.innerHTML = '<div class="gallery-grid">'+filtered.map(i=>'<div class="gallery-item reveal" style="background:linear-gradient(135deg,#1a0a1a,#0a0a0a);display:flex;align-items:center;justify-content:center"><div style="width:60px;height:60px;border:3px solid var(--pr);border-radius:50%;display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="var(--pr)"><polygon points="8,5 19,12 8,19"/></svg></div><div class="gallery-item-label">'+i.title+'<br><small style="color:var(--tx3);font-size:.75rem">'+i.date+'</small></div></div>').join('')+'</div>';
+} else {
+container.innerHTML = '<div class="press-list">'+filtered.map(i=>{
+const day = i.date.split('.')[0];
+return '<div class="press-item reveal" onclick="openNewsModal('+i.id+')"><div class="press-item-date"><div class="day">'+day+'</div><div class="mon">нов</div></div><div><div class="item-type">'+i.cat+'</div><h4>'+i.title+'</h4><p>'+i.desc+'</p></div></div>';
+}).join('')+'</div>';
+}
+setTimeout(() => {
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+}, {threshold: 0.1});
+container.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}, 50);
+}
+
+function filterNews(filter, btn){
+document.querySelectorAll('.press-tab').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+renderNews(filter);
+}
+
+const origOpen = openNewsModal;
+openNewsModal = function(id){
+const item = pressItems.find(i => i.id === id);
+if(!item) return origOpen(id);
+document.getElementById('newsModalImg').style.background = 'linear-gradient(135deg,#2a1a10,#1a0a05)';
+document.getElementById('newsModalCat').textContent = item.cat;
+document.getElementById('newsModalDate').textContent = item.date;
+document.getElementById('newsModalTitle').textContent = item.title;
+document.getElementById('newsModalText').innerHTML = item.full || '<p>'+item.desc+'</p>';
+document.getElementById('newsModal').classList.add('open');
+document.body.style.overflow = 'hidden';
+};
+
+document.addEventListener('DOMContentLoaded', () => renderNews('all'));
+</script>
+</body>
+</html>
