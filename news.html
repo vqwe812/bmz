@@ -13,30 +13,28 @@
 
 <div class="scroll-progress" id="scrollProgress"></div>
 <div class="preloader"><div class="preloader-spinner"></div></div>
-<header class="hdr" id="hdr">
-<div class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-</header>
+<header class="hdr" id="hdr"></header>
 
 <div class="page-hero">
 <div class="page-hero-inner">
-<div class="breadcrumbs"><a href="index.html">Главная</a><span class="sep">/</span><span class="current">Пресс-центр</span></div>
-<h1>Пресс-<span>центр</span></h1>
-<p>Новости, фотоальбом, газета «Металлург»</p>
+<div class="breadcrumbs">
+<a href="index.html" data-i18n-text="breadcrumb_home">Главная</a>
+<span class="sep">/</span>
+<span class="current" data-i18n-text="nav_press">Пресс-центр</span>
+</div>
+<h1 data-i18n="press_title">Пресс-<span>центр</span></h1>
+<p data-i18n-text="press_sub">Новости, фотоальбом, газета «Металлург»</p>
 </div>
 </div>
 
 <section class="sec">
 <div class="container">
 <div class="press-tabs reveal">
-<button class="press-tab active" onclick="filterNews('all',this)">Все</button>
-<button class="press-tab" onclick="filterNews('news',this)">Новости</button>
-<button class="press-tab" onclick="filterNews('photo',this)">Фотоальбом</button>
-<button class="press-tab" onclick="filterNews('paper',this)">Газета «Металлург»</button>
-<button class="press-tab" onclick="filterNews('video',this)">Видео</button>
+<button class="press-tab active" onclick="filterNews('all',this)" data-i18n-text="press_tab_all">Все</button>
+<button class="press-tab" onclick="filterNews('news',this)" data-i18n-text="press_tab_news">Новости</button>
+<button class="press-tab" onclick="filterNews('photo',this)" data-i18n-text="press_tab_photo">Фотоальбом</button>
+<button class="press-tab" onclick="filterNews('paper',this)" data-i18n-text="press_tab_paper">Газета «Металлург»</button>
+<button class="press-tab" onclick="filterNews('video',this)" data-i18n-text="press_tab_video">Видео</button>
 </div>
 <div id="newsContent"></div>
 </div>
@@ -45,9 +43,9 @@
 <section class="sec sec-alt">
 <div class="container">
 <div class="sec-title reveal">
-<h2>Достижения и <span>награды</span></h2>
+<h2 data-i18n="awards_title">Достижения и <span>награды</span></h2>
 <div class="line"></div>
-<p>Признание качества на международном уровне</p>
+<p data-i18n-text="awards_sub">Признание качества на международном уровне</p>
 </div>
 <div class="awards-carousel reveal">
 <div class="carousel-track" id="carouselTrack">
@@ -60,8 +58,8 @@
 <path d="M28 40v16M36 40v16M24 56h16"/>
 </svg>
 </div>
-<h4>Лидер отрасли СНГ</h4>
-<p>Топ-10 металлургических предприятий по объёму экспорта, 2025</p>
+<h4 data-i18n-text="award1_title">Лидер отрасли СНГ</h4>
+<p data-i18n-text="award1_desc">Топ-10 металлургических предприятий по объёму экспорта, 2025</p>
 </div>
 <div class="award-card">
 <div class="award-icon">
@@ -71,8 +69,8 @@
 <circle cx="32" cy="44" r="4" fill="var(--pr)"/>
 </svg>
 </div>
-<h4>ISO 9001:2015</h4>
-<p>Сертификат системы менеджмента качества</p>
+<h4 data-i18n-text="award2_title">ISO 9001:2015</h4>
+<p data-i18n-text="award2_desc">Сертификат системы менеджмента качества</p>
 </div>
 <div class="award-card">
 <div class="award-icon">
@@ -83,8 +81,8 @@
 <circle cx="32" cy="28" r="3" fill="var(--pr)"/>
 </svg>
 </div>
-<h4>Экологический стандарт</h4>
-<p>ISO 14001:2015 — экологический менеджмент</p>
+<h4 data-i18n-text="award3_title">Экологический стандарт</h4>
+<p data-i18n-text="award3_desc">ISO 14001:2015 — экологический менеджмент</p>
 </div>
 <div class="award-card">
 <div class="award-icon">
@@ -93,8 +91,8 @@
 <circle cx="32" cy="32" r="4" fill="var(--pr)"/>
 </svg>
 </div>
-<h4>Инновации 2024</h4>
-<p>Премия за внедрение новых технологий производства</p>
+<h4 data-i18n-text="award4_title">Инновации 2024</h4>
+<p data-i18n-text="award4_desc">Премия за внедрение новых технологий производства</p>
 </div>
 <div class="award-card">
 <div class="award-icon">
@@ -104,8 +102,8 @@
 <path d="M16 32h4M44 32h4M32 16v4M32 44v4"/>
 </svg>
 </div>
-<h4>Лучший экспортёр</h4>
-<p>Награда Министерства промышленности РБ, 2023</p>
+<h4 data-i18n-text="award5_title">Лучший экспортёр</h4>
+<p data-i18n-text="award5_desc">Награда Министерства промышленности РБ, 2023</p>
 </div>
 </div>
 <div class="carousel-controls">
@@ -121,10 +119,21 @@
 </section>
 
 <div class="news-modal" id="newsModal" onclick="if(event.target===this)closeNewsModal()">
-<div class="news-modal-content"><button class="news-modal-close" onclick="closeNewsModal()">✕</button><div class="news-modal-img" id="newsModalImg"></div><div class="news-modal-body"><div class="news-modal-cat" id="newsModalCat"></div><div class="news-modal-date" id="newsModalDate"></div><h2 id="newsModalTitle"></h2><div class="text" id="newsModalText"></div></div></div>
+<div class="news-modal-content">
+<button class="news-modal-close" onclick="closeNewsModal()">✕</button>
+<div class="news-modal-img" id="newsModalImg"></div>
+<div class="news-modal-body">
+<div class="news-modal-cat" id="newsModalCat"></div>
+<div class="news-modal-date" id="newsModalDate"></div>
+<h2 id="newsModalTitle"></h2>
+<div class="text" id="newsModalText"></div>
+</div>
+</div>
 </div>
 
-<button class="back-top" id="backTop" onclick="scrollToTop()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<button class="back-top" id="backTop" onclick="scrollToTop()">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
 
 <footer class="ftr" id="footer"></footer>
 <script src="js/main.js"></script>

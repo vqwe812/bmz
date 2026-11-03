@@ -13,19 +13,17 @@
 
 <div class="scroll-progress" id="scrollProgress"></div>
 <div class="preloader"><div class="preloader-spinner"></div></div>
-<header class="hdr" id="hdr">
-<div class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-</header>
+<header class="hdr" id="hdr"></header>
 
 <div class="page-hero">
 <div class="page-hero-inner">
-<div class="breadcrumbs"><a href="index.html">Главная</a><span class="sep">/</span><span class="current">Продукция</span></div>
-<h1>Наша <span>продукция</span></h1>
-<p>Широкий ассортимент металлопродукции для строительства, машиностроения и промышленности</p>
+<div class="breadcrumbs">
+<a href="index.html" data-i18n-text="breadcrumb_home">Главная</a>
+<span class="sep">/</span>
+<span class="current" data-i18n-text="nav_products">Продукция</span>
+</div>
+<h1 data-i18n="prod_title">Наша <span>продукция</span></h1>
+<p data-i18n-text="prod_sub">Широкий ассортимент металлопродукции для строительства, машиностроения и промышленности</p>
 </div>
 </div>
 
@@ -33,37 +31,85 @@
 <div class="container">
 <div class="catalog-filters reveal">
 <button class="catalog-filter active" data-cat="all">Все</button>
-<button class="catalog-filter" data-cat="rebar">Арматура</button>
-<button class="catalog-filter" data-cat="wire">Проволока</button>
-<button class="catalog-filter" data-cat="metalware">Метизы</button>
-<button class="catalog-filter" data-cat="long">Сортовой прокат</button>
-<button class="catalog-filter" data-cat="fastener">Крепёж</button>
-<button class="catalog-filter" data-cat="structural">Фасонный</button>
+<button class="catalog-filter" data-cat="rebar" data-i18n-text="p1t">Арматура</button>
+<button class="catalog-filter" data-cat="wire" data-i18n-text="p2t">Проволока</button>
+<button class="catalog-filter" data-cat="metalware" data-i18n-text="p3t">Метизы</button>
+<button class="catalog-filter" data-cat="long" data-i18n-text="p4t">Сортовой прокат</button>
+<button class="catalog-filter" data-cat="fastener" data-i18n-text="p5t">Крепёж</button>
+<button class="catalog-filter" data-cat="structural" data-i18n-text="p6t">Фасонный</button>
 </div>
 <div class="prod-grid">
 <div class="prod-card reveal" data-cat="rebar" onclick="location.href='product.html?id=1'">
 <div class="prod-img"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#1a1a1a"/><g stroke="#d4511e" stroke-width="3" fill="none"><line x1="40" y1="60" x2="360" y2="60"/><line x1="40" y1="100" x2="360" y2="100"/><line x1="40" y1="140" x2="360" y2="140"/><path d="M60 50 L70 70 L60 90 L70 110 L60 130 L70 150" stroke-width="2"/><path d="M120 50 L130 70 L120 90 L130 110 L120 130 L130 150" stroke-width="2"/><path d="M180 50 L190 70 L180 90 L190 110 L180 130 L190 150" stroke-width="2"/><path d="M240 50 L250 70 L240 90 L250 110 L240 130 L250 150" stroke-width="2"/><path d="M300 50 L310 70 L300 90 L310 110 L300 130 L310 150" stroke-width="2"/></g></svg></div>
-<div class="prod-card-body"><h3>Стальная арматура</h3><p>Горячекатаная арматура различных классов прочности.</p><ul><li>Диаметр 6–40 мм</li><li>Классы А-I, А-III, А-V</li><li>ГОСТ 34028-2016</li></ul></div>
+<div class="prod-card-body">
+<h3 data-i18n-text="p1t">Стальная арматура</h3>
+<p data-i18n-text="p1d">Горячекатаная арматура различных классов прочности.</p>
+<ul>
+<li data-i18n-text="p1a">Диаметр 6–40 мм</li>
+<li data-i18n-text="p1b">Классы А-I, А-III, А-V</li>
+<li data-i18n-text="p1c">ГОСТ 34028-2016</li>
+</ul>
+</div>
 </div>
 <div class="prod-card reveal" data-cat="wire" onclick="location.href='product.html?id=2'">
 <div class="prod-img"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#1a1a1a"/><circle cx="200" cy="100" r="60" fill="none" stroke="#d4511e" stroke-width="2"/><circle cx="200" cy="100" r="45" fill="none" stroke="#d4511e" stroke-width="1.5"/><circle cx="200" cy="100" r="30" fill="none" stroke="#d4511e" stroke-width="1"/><path d="M200 40 Q260 40 260 100 Q260 160 200 160" fill="none" stroke="#f07840" stroke-width="2"/></svg></div>
-<div class="prod-card-body"><h3>Катанка и проволока</h3><p>Проволока строительная, пружинная, сварочная.</p><ul><li>Низкоуглеродистая</li><li>Общего назначения</li><li>Специальные марки</li></ul></div>
+<div class="prod-card-body">
+<h3 data-i18n-text="p2t">Катанка и проволока</h3>
+<p data-i18n-text="p2d">Проволока строительная, пружинная, сварочная.</p>
+<ul>
+<li data-i18n-text="p2a">Низкоуглеродистая</li>
+<li data-i18n-text="p2b">Общего назначения</li>
+<li data-i18n-text="p2c">Специальные марки</li>
+</ul>
+</div>
 </div>
 <div class="prod-card reveal" data-cat="metalware" onclick="location.href='product.html?id=3'">
 <div class="prod-img"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#1a1a1a"/><g stroke="#d4511e" fill="none" stroke-width="2"><path d="M50 50 L150 50 L150 150 L50 150 Z"/><path d="M50 50 L150 150"/><path d="M150 50 L50 150"/><path d="M100 50 L100 150"/><path d="M50 100 L150 100"/><path d="M200 80 L350 80 L350 120 L200 120 Z"/><path d="M220 80 L220 120"/><path d="M260 80 L260 120"/><path d="M300 80 L300 120"/><path d="M340 80 L340 120"/></g></svg></div>
-<div class="prod-card-body"><h3>Метизная продукция</h3><p>Канаты, сетки, гвозди промышленного назначения.</p><ul><li>Стальные канаты</li><li>Сетки плетёные</li><li>Проволока вязальная</li></ul></div>
+<div class="prod-card-body">
+<h3 data-i18n-text="p3t">Метизная продукция</h3>
+<p data-i18n-text="p3d">Канаты, сетки, гвозди промышленного назначения.</p>
+<ul>
+<li data-i18n-text="p3a">Стальные канаты</li>
+<li data-i18n-text="p3b">Сетки плетёные</li>
+<li data-i18n-text="p3c">Проволока вязальная</li>
+</ul>
+</div>
 </div>
 <div class="prod-card reveal" data-cat="long" onclick="location.href='product.html?id=4'">
 <div class="prod-img"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#1a1a1a"/><circle cx="120" cy="100" r="50" fill="none" stroke="#d4511e" stroke-width="3"/><rect x="220" y="50" width="100" height="100" fill="none" stroke="#d4511e" stroke-width="3"/><polygon points="340,100 370,50 400,100 370,150" fill="none" stroke="#d4511e" stroke-width="3"/></svg></div>
-<div class="prod-card-body"><h3>Сортовой прокат</h3><p>Круг, квадрат, шестигранник для машиностроения.</p><ul><li>Круг 12–250 мм</li><li>Квадрат 14–150 мм</li><li>Конструкционные марки</li></ul></div>
+<div class="prod-card-body">
+<h3 data-i18n-text="p4t">Сортовой прокат</h3>
+<p data-i18n-text="p4d">Круг, квадрат, шестигранник для машиностроения.</p>
+<ul>
+<li data-i18n-text="p4a">Круг 12–250 мм</li>
+<li data-i18n-text="p4b">Квадрат 14–150 мм</li>
+<li data-i18n-text="p4c">Конструкционные марки</li>
+</ul>
+</div>
 </div>
 <div class="prod-card reveal" data-cat="fastener" onclick="location.href='product.html?id=5'">
 <div class="prod-img"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#1a1a1a"/><g fill="none" stroke="#d4511e" stroke-width="2"><polygon points="100,60 130,60 145,85 130,110 100,110 85,85"/><circle cx="115" cy="85" r="15"/><rect x="200" y="50" width="30" height="100" rx="3"/><rect x="195" y="50" width="40" height="15" rx="2"/><rect x="195" y="135" width="40" height="15" rx="2"/><polygon points="320,60 350,60 365,85 350,110 320,110 305,85"/></g></svg></div>
-<div class="prod-card-body"><h3>Крепёжные изделия</h3><p>Болты, гайки, шпильки для строительства.</p><ul><li>Болты и гайки</li><li>Шпильки резьбовые</li><li>Заклёпки</li></ul></div>
+<div class="prod-card-body">
+<h3 data-i18n-text="p5t">Крепёжные изделия</h3>
+<p data-i18n-text="p5d">Болты, гайки, шпильки для строительства.</p>
+<ul>
+<li data-i18n-text="p5a">Болты и гайки</li>
+<li data-i18n-text="p5b">Шпильки резьбовые</li>
+<li data-i18n-text="p5c">Заклёпки</li>
+</ul>
+</div>
 </div>
 <div class="prod-card reveal" data-cat="structural" onclick="location.href='product.html?id=6'">
 <div class="prod-img"><svg viewBox="0 0 400 200"><rect width="400" height="200" fill="#1a1a1a"/><g fill="none" stroke="#d4511e" stroke-width="3"><path d="M60 50 L60 150 L140 150"/><path d="M180 50 L260 50 L260 150 L180 150 Z"/><path d="M300 50 L380 50 L380 70 L320 70 L320 130 L380 130 L380 150 L300 150 Z"/></g></svg></div>
-<div class="prod-card-body"><h3>Фасонный прокат</h3><p>Уголок, швеллер, спецпрофили.</p><ul><li>Уголок равнополочный</li><li>Швеллеры</li><li>Профили по ТУ</li></ul></div>
+<div class="prod-card-body">
+<h3 data-i18n-text="p6t">Фасонный прокат</h3>
+<p data-i18n-text="p6d">Уголок, швеллер, спецпрофили.</p>
+<ul>
+<li data-i18n-text="p6a">Уголок равнополочный</li>
+<li data-i18n-text="p6b">Швеллеры</li>
+<li data-i18n-text="p6c">Профили по ТУ</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -110,10 +156,21 @@
 </section>
 
 <div class="news-modal" id="newsModal" onclick="if(event.target===this)closeNewsModal()">
-<div class="news-modal-content"><button class="news-modal-close" onclick="closeNewsModal()">✕</button><div class="news-modal-img" id="newsModalImg"></div><div class="news-modal-body"><div class="news-modal-cat" id="newsModalCat"></div><div class="news-modal-date" id="newsModalDate"></div><h2 id="newsModalTitle"></h2><div class="text" id="newsModalText"></div></div></div>
+<div class="news-modal-content">
+<button class="news-modal-close" onclick="closeNewsModal()">✕</button>
+<div class="news-modal-img" id="newsModalImg"></div>
+<div class="news-modal-body">
+<div class="news-modal-cat" id="newsModalCat"></div>
+<div class="news-modal-date" id="newsModalDate"></div>
+<h2 id="newsModalTitle"></h2>
+<div class="text" id="newsModalText"></div>
+</div>
+</div>
 </div>
 
-<button class="back-top" id="backTop" onclick="scrollToTop()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<button class="back-top" id="backTop" onclick="scrollToTop()">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
 
 <footer class="ftr" id="footer"></footer>
 <script src="js/main.js"></script>
