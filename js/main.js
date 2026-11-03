@@ -600,3 +600,24 @@ statsObserver.disconnect();
 const statsEl = document.querySelector('.stats');
 if(statsEl) statsObserver.observe(statsEl);
 });
+// ===== МОБИЛЬНОЕ МЕНЮ =====
+function toggleMobileMenu(){
+    const nav = document.getElementById('nav');
+    const burger = document.getElementById('burgerMenu');
+    if(nav && burger){
+        nav.classList.toggle('mobile-open');
+        burger.classList.toggle('active');
+    }
+}
+
+// Закрыть меню при клике на ссылку
+document.addEventListener('click', e => {
+    if(e.target.closest('.nav-link')){
+        const nav = document.getElementById('nav');
+        const burger = document.getElementById('burgerMenu');
+        if(nav && nav.classList.contains('mobile-open')){
+            nav.classList.remove('mobile-open');
+            burger.classList.remove('active');
+        }
+    }
+});
