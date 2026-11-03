@@ -1,4 +1,3 @@
-// ===== LANGUAGE =====
 let lang = 'ru';
 const T = {
 ru: {
@@ -98,7 +97,46 @@ m_about_general:'Общая информация', m_about_leadership:'Руко�
 m_buyer_products:'Продукция', m_buyer_credit:'Экспортное кредитование', m_buyer_quality:'О системе качества', m_buyer_cert:'Сертификаты', m_buyer_order:'Порядок оформления', m_buyer_online:'On-line заявка', m_buyer_network:'Товаропроводящая сеть', m_buyer_exchange:'Биржевые торги',
 m_supplier_contests:'Конкурсы', m_supplier_procurement:'Закупки', m_supplier_code:'Кодекс поставщика',
 m_press_news:'Новости', m_press_photo:'Фотоальбом', m_press_paper:'Газета «Металлург»', m_press_video:'Видео',
-m_contacts_info:'Контактная информация', m_contacts_buyer:'Для покупателя', m_contacts_supplier:'Для поставщика', m_contacts_press:'Для прессы', m_contacts_appeals:'Обращения'
+m_contacts_info:'Контактная информация', m_contacts_buyer:'Для покупателя', m_contacts_supplier:'Для поставщика', m_contacts_press:'Для прессы', m_contacts_appeals:'Обращения',
+live_counter_title:'ПРОИЗВОДСТВО В РЕАЛЬНОМ ВРЕМЕНИ',
+counter_steel_label:'Тонн стали с 2026 года',
+counter_rebar_label:'Метров арматуры',
+counter_export_label:'Тонн на экспорт',
+counter_countries_label:'Стран-партнёров',
+plant_map_title:'Территория <span>завода</span>',
+plant_map_sub:'Нажмите на объект, чтобы узнать подробности',
+export_title:'География <span>экспорта</span>',
+export_sub:'Поставки в более чем 70 стран мира',
+export_countries:'Стран',
+export_continents:'Континентов',
+export_tons:'Тонн/год',
+awards_title:'Достижения и <span>награды</span>',
+awards_sub:'Признание качества на международном уровне',
+award1_title:'Лидер отрасли СНГ',
+award1_desc:'Топ-10 металлургических предприятий по объёму экспорта, 2025',
+award2_title:'ISO 9001:2015',
+award2_desc:'Сертификат системы менеджмента качества',
+award3_title:'Экологический стандарт',
+award3_desc:'ISO 14001:2015 — экологический менеджмент',
+award4_title:'Инновации 2024',
+award4_desc:'Премия за внедрение новых технологий производства',
+award5_title:'Лучший экспортёр',
+award5_desc:'Награда Министерства промышленности РБ, 2023',
+cycle_title:'Производственный <span>цикл</span>',
+cycle_sub:'Нажмите на этап, чтобы узнать подробности',
+cycle1:'Плавка', cycle2:'Разливка', cycle3:'Прокатка', cycle4:'Резка', cycle5:'Упаковка',
+cycle1_title:'Электродуговая плавка',
+cycle1_desc:'Шихта загружается в печь «Данарк» мощностью 70 тонн. Температура плавления достигает 1600°C. Процесс занимает около 45 минут.',
+cycle2_title:'Непрерывная разливка',
+cycle2_desc:'Расплавленная сталь разливается в кристаллизаторы, формируя заготовки сечением 150×150 мм. Скорость разливки — до 3 м/мин.',
+cycle3_title:'Горячая прокатка',
+cycle3_desc:'Заготовки нагреваются до 1200°C и проходят через сортопрокатный стан «370». Формируется готовый профиль нужного сечения.',
+cycle4_title:'Резка и контроль',
+cycle4_desc:'Прокат нарезается на мерные длины 6–12 м. Каждая партия проходит контроль качества в лаборатории ОТК.',
+cycle5_title:'Упаковка и отгрузка',
+cycle5_desc:'Готовая продукция маркируется, упаковывается в пачки и отгружается железнодорожным или автомобильным транспортом.',
+form_success:'✓ Сообщение отправлено! Мы свяжемся с вами в ближайшее время.',
+form_subject_options:['Общий вопрос','Заказ продукции','Сотрудничество','Пресса','Другое']
 },
 en: {
 search_label:'Search', nav_home:'Home', nav_about:'About', nav_products:'Products',
@@ -197,17 +235,77 @@ m_about_general:'General Info', m_about_leadership:'Leadership', m_about_sustain
 m_buyer_products:'Products', m_buyer_credit:'Export Credit', m_buyer_quality:'Quality System', m_buyer_cert:'Certificates', m_buyer_order:'Ordering', m_buyer_online:'Online App.', m_buyer_network:'Distribution', m_buyer_exchange:'Exchange Trading',
 m_supplier_contests:'Contests', m_supplier_procurement:'Procurement', m_supplier_code:'Supplier Code',
 m_press_news:'News', m_press_photo:'Photo Album', m_press_paper:'Newspaper', m_press_video:'Video',
-m_contacts_info:'Contact Info', m_contacts_buyer:'For Buyers', m_contacts_supplier:'For Suppliers', m_contacts_press:'For Press', m_contacts_appeals:'Appeals'
+m_contacts_info:'Contact Info', m_contacts_buyer:'For Buyers', m_contacts_supplier:'For Suppliers', m_contacts_press:'For Press', m_contacts_appeals:'Appeals',
+live_counter_title:'LIVE PRODUCTION',
+counter_steel_label:'Tons of steel since 2026',
+counter_rebar_label:'Meters of rebar',
+counter_export_label:'Tons for export',
+counter_countries_label:'Partner countries',
+plant_map_title:'Plant <span>Territory</span>',
+plant_map_sub:'Click on an object for details',
+export_title:'Export <span>Geography</span>',
+export_sub:'Deliveries to more than 70 countries',
+export_countries:'Countries',
+export_continents:'Continents',
+export_tons:'Tons/year',
+awards_title:'Achievements and <span>Awards</span>',
+awards_sub:'International quality recognition',
+award1_title:'CIS Industry Leader',
+award1_desc:'Top 10 metallurgical enterprises by export volume, 2025',
+award2_title:'ISO 9001:2015',
+award2_desc:'Quality management system certificate',
+award3_title:'Environmental Standard',
+award3_desc:'ISO 14001:2015 — environmental management',
+award4_title:'Innovation 2024',
+award4_desc:'Award for new production technologies',
+award5_title:'Best Exporter',
+award5_desc:'Ministry of Industry of Belarus Award, 2023',
+cycle_title:'Production <span>Cycle</span>',
+cycle_sub:'Click on a stage for details',
+cycle1:'Smelting', cycle2:'Casting', cycle3:'Rolling', cycle4:'Cutting', cycle5:'Packing',
+cycle1_title:'Electric Arc Smelting',
+cycle1_desc:'Charge is loaded into the "Danarc" furnace with 70 ton capacity. Melting temperature reaches 1600°C. Process takes about 45 minutes.',
+cycle2_title:'Continuous Casting',
+cycle2_desc:'Molten steel is poured into crystallizers, forming billets 150×150 mm. Casting speed — up to 3 m/min.',
+cycle3_title:'Hot Rolling',
+cycle3_desc:'Billets are heated to 1200°C and pass through bar mill "370". Final profile of required section is formed.',
+cycle4_title:'Cutting and Control',
+cycle4_desc:'Rolled products are cut to lengths of 6–12 m. Each batch passes quality control in the QC laboratory.',
+cycle5_title:'Packing and Shipping',
+cycle5_desc:'Finished products are marked, packed in bundles and shipped by rail or road transport.',
+form_success:'✓ Message sent! We will contact you soon.',
+form_subject_options:['General question','Product order','Cooperation','Press','Other']
 }
 };
 function t(k){return T[lang][k]||k}
 
-// ===== HEADER RENDER =====
+// ===== ПРИМЕНИТЬ ЯЗЫК КО ВСЕМУ КОНТЕНТУ =====
+function applyLang(){
+document.querySelectorAll('[data-i18n]').forEach(el=>{
+const k=el.getAttribute('data-i18n');
+if(T[lang][k]) el.innerHTML=T[lang][k];
+});
+document.querySelectorAll('[data-i18n-text]').forEach(el=>{
+const k=el.getAttribute('data-i18n-text');
+if(T[lang][k]) el.textContent=T[lang][k];
+});
+document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+const k=el.getAttribute('data-i18n-ph');
+if(T[lang][k]) el.placeholder=T[lang][k];
+});
+document.getElementById('langCur').textContent=lang.toUpperCase();
+document.getElementById('langAlt').textContent=(lang==='ru'?'en':'ru').toUpperCase();
+document.documentElement.lang=lang;
+renderHeader();
+renderFooter();
+}
+
+// ===== HEADER =====
 function renderHeader(){
-const hdr = document.getElementById('hdr');
+const hdr=document.getElementById('hdr');
 if(!hdr) return;
-const currentPage = document.body.dataset.page || 'home';
-const navStructure = [
+const currentPage=document.body.dataset.page||'home';
+const navStructure=[
 {key:'home',label:'nav_home',href:'index.html'},
 {key:'about',label:'nav_about',href:'about.html',children:[['m_about_general','about.html'],['m_about_leadership','about.html'],['m_about_sustainable','about.html'],['m_about_chronology','about.html']]},
 {key:'products',label:'nav_products',href:'catalog.html'},
@@ -217,364 +315,346 @@ const navStructure = [
 {key:'exchange',label:'nav_exchange',href:'https://www.butb.by/shedule/metalloproduktsiya/',external:true},
 {key:'contacts',label:'nav_contacts',href:'contacts.html',children:[['m_contacts_info','contacts.html'],['m_contacts_buyer','contacts.html'],['m_contacts_supplier','contacts.html'],['m_contacts_press','contacts.html'],['m_contacts_appeals','contacts.html']]}
 ];
-let navHTML = '';
-navStructure.forEach(item => {
-const isActive = item.key === currentPage;
-const targetAttr = item.external ? ' target="_blank" rel="noopener"' : '';
-navHTML += '<div class="nav-item">';
-navHTML += '<a class="nav-link'+(isActive?' active':'')+'" href="'+item.href+'"'+targetAttr+'>'+t(item.label)+(item.children?' <span class="arrow">▼</span>':'')+'</a>';
+let navHTML='';
+navStructure.forEach(item=>{
+const isActive=item.key===currentPage;
+const targetAttr=item.external?' target="_blank" rel="noopener"':'';
+navHTML+='<div class="nav-item">';
+navHTML+='<a class="nav-link'+(isActive?' active':'')+'" href="'+item.href+'"'+targetAttr+'>'+t(item.label)+(item.children?' <span class="arrow">▼</span>':'')+'</a>';
 if(item.children){
-navHTML += '<div class="nav-dropdown">';
-item.children.forEach(([ck,hk]) => {
-navHTML += '<a href="'+hk+'">'+t(ck)+'</a>';
+navHTML+='<div class="nav-dropdown">';
+item.children.forEach(([ck,hk])=>{
+navHTML+='<a href="'+hk+'">'+t(ck)+'</a>';
 });
-navHTML += '</div>';
+navHTML+='</div>';
 }
-navHTML += '</div>';
+navHTML+='</div>';
 });
-hdr.innerHTML = '<div class="hdr-in"><div class="logo" onclick="location.href=\'index.html\'"><img class="logo-svg" src="images/bmz-logo.png" alt="БМЗ"><div class="logo-text">ОАО <em>«БМЗ»</em></div></div><nav class="nav-bar">'+navHTML+'</nav><div class="hdr-acts"><div class="search-wrap"><button class="hdr-btn search-btn" onclick="toggleSearch()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button><div class="search-dropdown" id="searchDropdown"><div class="search-dropdown-header">'+t('search_label')+'</div><div class="search-inline-wrap"><input id="searchInput" placeholder="'+t('search_ph')+'" oninput="doSearch(this.value)"><button onclick="doSearch(document.getElementById(\'searchInput\').value)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div><div class="search-results" id="searchResults"></div></div></div><button class="hdr-btn lang-sw" onclick="toggleLang()"><span class="cur" id="langCur">'+lang.toUpperCase()+'</span><span style="color:var(--tx3)">/</span><span class="alt" id="langAlt">'+(lang==='ru'?'en':'ru').toUpperCase()+'</span></button></div></div>';
+hdr.innerHTML='<div class="hdr-in"><div class="logo" onclick="location.href=\'index.html\'"><img class="logo-svg" src="images/bmz-logo.png" alt="БМЗ"><div class="logo-text">ОАО <em>«БМЗ»</em></div></div><nav class="nav-bar" id="nav">'+navHTML+'</nav><div class="burger-menu" id="burgerMenu" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div><div class="hdr-acts"><div class="search-wrap"><button class="hdr-btn search-btn" onclick="toggleSearch()" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button><div class="search-dropdown" id="searchDropdown"><div class="search-dropdown-header">'+t('search_label')+'</div><div class="search-inline-wrap"><input id="searchInput" type="text" placeholder="'+t('search_ph')+'" oninput="doSearch(this.value)"><button type="button" onclick="doSearch(document.getElementById(\'searchInput\').value)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div><div class="search-results" id="searchResults"></div></div></div><button class="hdr-btn lang-sw" onclick="toggleLang()"><span class="cur" id="langCur">'+lang.toUpperCase()+'</span><span style="color:var(--tx3)">/</span><span class="alt" id="langAlt">'+(lang==='ru'?'en':'ru').toUpperCase()+'</span></button></div></div>';
 }
 
-// ===== FOOTER RENDER =====
+// ===== FOOTER =====
 function renderFooter(){
-const ftr = document.getElementById('footer');
+const ftr=document.getElementById('footer');
 if(!ftr) return;
-ftr.innerHTML = '<div class="container"><div class="ftr-grid"><div class="ftr-col"><div class="ftr-brand" onclick="location.href=\'index.html\'"><img src="images/bmz-logo.png" alt="БМЗ"><div class="ftr-brand-name">ОАО <em>«БМЗ»</em></div></div><p class="ftr-desc">'+t('ftr_desc')+'</p></div><div class="ftr-col"><h4>'+t('ftr_nav')+'</h4><a href="index.html">'+t('nav_home')+'</a><a href="about.html">'+t('nav_about')+'</a><a href="catalog.html">'+t('nav_products')+'</a><a href="news.html">'+t('nav_press')+'</a></div><div class="ftr-col"><h4>'+t('ftr_biz')+'</h4><a href="catalog.html">'+t('nav_buyers')+'</a><a href="catalog.html">'+t('nav_suppliers')+'</a><a href="https://www.butb.by/shedule/metalloproduktsiya/" target="_blank" rel="noopener">'+t('nav_exchange')+'</a></div><div class="ftr-col"><h4>'+t('ftr_contacts')+'</h4><p>'+t('ftr_addr')+'</p><p><a href="tel:+375233420000">'+t('ftr_phone')+'</a></p><p><a href="mailto:info@bmz.by">'+t('ftr_email')+'</a></p></div></div><div class="ftr-bot">© 2026 ОАО «Белорусский металлургический завод». '+t('ftr_rights')+'</div></div>';
+ftr.innerHTML='<div class="container"><div class="ftr-grid"><div class="ftr-col"><div class="ftr-brand" onclick="location.href=\'index.html\'"><img src="images/bmz-logo.png" alt="БМЗ"><div class="ftr-brand-name">ОАО <em>«БМЗ»</em></div></div><p class="ftr-desc" data-i18n="ftr_desc">'+t('ftr_desc')+'</p></div><div class="ftr-col"><h4 data-i18n-text="ftr_nav">'+t('ftr_nav')+'</h4><a href="index.html" data-i18n-text="nav_home">'+t('nav_home')+'</a><a href="about.html" data-i18n-text="nav_about">'+t('nav_about')+'</a><a href="catalog.html" data-i18n-text="nav_products">'+t('nav_products')+'</a><a href="news.html" data-i18n-text="nav_press">'+t('nav_press')+'</a></div><div class="ftr-col"><h4 data-i18n-text="ftr_biz">'+t('ftr_biz')+'</h4><a href="catalog.html" data-i18n-text="nav_buyers">'+t('nav_buyers')+'</a><a href="catalog.html" data-i18n-text="nav_suppliers">'+t('nav_suppliers')+'</a><a href="https://www.butb.by/shedule/metalloproduktsiya/" target="_blank" rel="noopener" data-i18n-text="nav_exchange">'+t('nav_exchange')+'</a></div><div class="ftr-col"><h4 data-i18n-text="ftr_contacts">'+t('ftr_contacts')+'</h4><p data-i18n-text="ftr_addr">'+t('ftr_addr')+'</p><p><a href="tel:+375233420000">'+t('ftr_phone')+'</a></p><p><a href="mailto:info@bmz.by">'+t('ftr_email')+'</a></p></div></div><div class="ftr-bot">© 2026 ОАО «Белорусский металлургический завод». <span data-i18n-text="ftr_rights">'+t('ftr_rights')+'</span></div></div>';
 }
 
 // ===== LANGUAGE TOGGLE =====
 function toggleLang(){
-lang = lang === 'ru' ? 'en' : 'ru';
-document.getElementById('langCur').textContent = lang.toUpperCase();
-document.getElementById('langAlt').textContent = (lang === 'ru' ? 'en' : 'ru').toUpperCase();
-document.documentElement.lang = lang;
-renderHeader();
-renderFooter();
+lang=lang==='ru'?'en':'ru';
+applyLang();
+}
+
+// ===== MOBILE MENU =====
+function toggleMobileMenu(){
+const nav=document.getElementById('nav');
+const burger=document.getElementById('burgerMenu');
+if(nav&&burger){
+nav.classList.toggle('mobile-open');
+burger.classList.toggle('active');
+}
 }
 
 // ===== SEARCH =====
 function toggleSearch(){
-const dd = document.getElementById('searchDropdown');
+const dd=document.getElementById('searchDropdown');
+if(!dd) return;
 dd.classList.toggle('open');
-if(dd.classList.contains('open')){setTimeout(()=>document.getElementById('searchInput').focus(),100);document.getElementById('searchInput').value='';document.getElementById('searchResults').innerHTML=''}
-else{document.getElementById('searchInput').value='';document.getElementById('searchResults').innerHTML=''}
+if(dd.classList.contains('open')){
+setTimeout(()=>{const i=document.getElementById('searchInput');if(i){i.focus();i.value=''}},100);
+const r=document.getElementById('searchResults');if(r) r.innerHTML='';
+} else {
+const i=document.getElementById('searchInput');if(i) i.value='';
+const r=document.getElementById('searchResults');if(r) r.innerHTML='';
 }
-document.addEventListener('click', e => {
-const dd = document.getElementById('searchDropdown');
-const sw = e.target.closest('.search-wrap');
-if(!sw && dd && dd.classList.contains('open')) dd.classList.remove('open');
+}
+document.addEventListener('click',e=>{
+const dd=document.getElementById('searchDropdown');
+const sw=e.target.closest('.search-wrap');
+if(!sw&&dd&&dd.classList.contains('open')) dd.classList.remove('open');
 });
 
 function doSearch(q){
-const res = document.getElementById('searchResults');
+const res=document.getElementById('searchResults');
 if(!res) return;
-if(!q.trim()){res.innerHTML='';return}
-const ql = q.toLowerCase();
-const items = [];
-Object.keys(T[lang]).forEach(k => {
-const v = T[lang][k];
-if(typeof v === 'string' && v.toLowerCase().includes(ql) && k.length > 3){
-let pg = 'index.html';
-if(k.startsWith('nav_')) pg = k.replace('nav_','') === 'home' ? 'index.html' : k.replace('nav_','') + '.html';
-if(k.match(/^n[1-3][tfd]/)) pg = 'index.html';
-if(k.match(/^[pt]\d/)) pg = 'catalog.html';
-if(k.startsWith('buy_')) pg = 'catalog.html';
-if(k.startsWith('sup_')) pg = 'catalog.html';
-if(k.startsWith('v')) pg = 'news.html';
-if(k.startsWith('pr')) pg = 'news.html';
-if(k.match(/^[tf]\d|^ab_/)) pg = 'about.html';
-if(k.startsWith('con_')) pg = 'contacts.html';
-items.push({page:pg, title:v.replace(/<[^>]*>/g,'').substring(0,100), pageName:t('nav_'+k.split('_')[0])});
+res.innerHTML='';
+if(!q||!q.trim()) return;
+const ql=q.toLowerCase().trim();
+const items=[];
+const seen=new Set();
+Object.keys(T[lang]).forEach(k=>{
+const v=T[lang][k];
+if(typeof v==='string'&&v.toLowerCase().includes(ql)&&k.length>3){
+let pg='index.html';
+if(k.startsWith('nav_')){
+const page=k.replace('nav_','');
+if(page==='home') pg='index.html';
+else if(page==='about') pg='about.html';
+else if(page==='products') pg='catalog.html';
+else if(page==='buyers') pg='catalog.html';
+else if(page==='suppliers') pg='catalog.html';
+else if(page==='press') pg='news.html';
+else if(page==='exchange') pg='https://www.butb.by/shedule/metalloproduktsiya/';
+else if(page==='contacts') pg='contacts.html';
+}
+else if(k.match(/^n[1-3][tfd]/)) pg='index.html';
+else if(k.match(/^[pt]\d/)) pg='catalog.html';
+else if(k.startsWith('buy_')) pg='catalog.html';
+else if(k.startsWith('sup_')) pg='catalog.html';
+else if(k.startsWith('v')) pg='news.html';
+else if(k.startsWith('pr')) pg='news.html';
+else if(k.match(/^[tf]\d|^ab_/)) pg='about.html';
+else if(k.startsWith('con_')) pg='contacts.html';
+else if(k.startsWith('m_')){
+const m=k.split('_')[1];
+if(m==='about') pg='about.html';
+else if(m==='buyer') pg='catalog.html';
+else if(m==='supplier') pg='catalog.html';
+else if(m==='press') pg='news.html';
+else if(m==='contact') pg='contacts.html';
+}
+const cleanTitle=v.replace(/<[^>]*>/g,'').substring(0,100);
+const key=cleanTitle+'|'+pg;
+if(!seen.has(key)){
+seen.add(key);
+items.push({page:pg,title:cleanTitle,pageName:t('nav_'+k.split('_')[0])||pg});
+}
 }
 });
-const unique = [...new Map(items.map(i=>[i.title,i])).values()].slice(0,8);
+const unique=items.slice(0,8);
 if(!unique.length){res.innerHTML='<div class="search-empty">'+t('no_results')+'</div>';return}
-res.innerHTML = unique.map(i => '<a href="'+i.page+'"><div class="sr-page">'+i.pageName+'</div><div class="sr-title">'+i.title+'</div></a>').join('');
+res.innerHTML=unique.map(i=>{
+const isExternal=i.page.startsWith('http');
+const targetAttr=isExternal?' target="_blank" rel="noopener"':'';
+return '<a href="'+i.page+'"'+targetAttr+'><div class="sr-page">'+i.pageName+'</div><div class="sr-title">'+i.title+'</div></a>';
+}).join('');
 }
 
 // ===== NEWS MODAL =====
 function openNewsModal(id){
-const data = {
-1:{cat:t('n1c'), date:lang==='ru'?'02 октября 2026':'October 02, 2026', title:t('n1t'), text:t('n1f'), bg:'linear-gradient(135deg,#2a1a10,#1a0a05)'},
-2:{cat:t('n2c'), date:lang==='ru'?'28 сентября 2026':'September 28, 2026', title:t('n2t'), text:t('n2f'), bg:'linear-gradient(135deg,#0a1a2a,#050a15)'},
-3:{cat:t('n3c'), date:lang==='ru'?'19 сентября 2026':'September 19, 2026', title:t('n3t'), text:t('n3f'), bg:'linear-gradient(135deg,#1a2a1a,#0a150a)'}
+const data={
+1:{cat:t('n1c'),date:lang==='ru'?'02 октября 2026':'October 02, 2026',title:t('n1t'),text:t('n1f'),bg:'linear-gradient(135deg,#2a1a10,#1a0a05)'},
+2:{cat:t('n2c'),date:lang==='ru'?'28 сентября 2026':'September 28, 2026',title:t('n2t'),text:t('n2f'),bg:'linear-gradient(135deg,#0a1a2a,#050a15)'},
+3:{cat:t('n3c'),date:lang==='ru'?'19 сентября 2026':'September 19, 2026',title:t('n3t'),text:t('n3f'),bg:'linear-gradient(135deg,#1a2a1a,#0a150a)'}
 };
-const n = data[id]; if(!n) return;
-document.getElementById('newsModalImg').style.background = n.bg;
-document.getElementById('newsModalCat').textContent = n.cat;
-document.getElementById('newsModalDate').textContent = n.date;
-document.getElementById('newsModalTitle').textContent = n.title;
-document.getElementById('newsModalText').innerHTML = n.text;
+const n=data[id];if(!n) return;
+document.getElementById('newsModalImg').style.background=n.bg;
+document.getElementById('newsModalCat').textContent=n.cat;
+document.getElementById('newsModalDate').textContent=n.date;
+document.getElementById('newsModalTitle').textContent=n.title;
+document.getElementById('newsModalText').innerHTML=n.text;
 document.getElementById('newsModal').classList.add('open');
-document.body.style.overflow = 'hidden';
+document.body.style.overflow='hidden';
 }
 function closeNewsModal(){document.getElementById('newsModal').classList.remove('open');document.body.style.overflow=''}
-document.addEventListener('keydown', e => {if(e.key==='Escape') closeNewsModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeNewsModal()});
 
-// ===== SCROLL EFFECTS =====
-window.addEventListener('scroll', () => {
-const hdr = document.getElementById('hdr');
-if(hdr) hdr.classList.toggle('solid', window.scrollY > 60);
-const btn = document.getElementById('backTop');
-if(btn) btn.classList.toggle('visible', window.scrollY > 400);
-const bar = document.getElementById('scrollProgress');
+// ===== SCROLL =====
+window.addEventListener('scroll',()=>{
+const hdr=document.getElementById('hdr');
+if(hdr) hdr.classList.toggle('solid',window.scrollY>60);
+const btn=document.getElementById('backTop');
+if(btn) btn.classList.toggle('visible',window.scrollY>400);
+const bar=document.getElementById('scrollProgress');
 if(bar){
-const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-const scrolled = (winScroll / height) * 100;
-bar.style.width = scrolled + '%';
+const winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+bar.style.width=(winScroll/height)*100+'%';
 }
 });
-
 function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
 
-// ===== SCROLL REVEAL =====
+// ===== REVEAL =====
 function initReveal(){
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-}
-});
-}, {threshold: 0.1});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{if(entry.isIntersecting) entry.target.classList.add('visible')});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 }
 
-// ===== COUNTER ANIMATION =====
+// ===== COUNTERS =====
 function animateCounters(){
-document.querySelectorAll('.stat-n').forEach(el => {
-const text = el.textContent;
-const num = parseFloat(text.replace(/[^0-9.]/g,''));
+document.querySelectorAll('.stat-n').forEach(el=>{
+const text=el.textContent;
+const num=parseFloat(text.replace(/[^0-9.]/g,''));
 if(isNaN(num)) return;
-const suffix = text.replace(/[0-9.,]/g,'');
-const duration = 2000;
-const start = performance.now();
-const animate = (now) => {
-const progress = Math.min((now - start) / duration, 1);
-const eased = 1 - Math.pow(1 - progress, 3);
-const current = num * eased;
+const suffix=text.replace(/[0-9.,]/g,'');
+const duration=2000;
+const start=performance.now();
+const animate=(now)=>{
+const progress=Math.min((now-start)/duration,1);
+const eased=1-Math.pow(1-progress,3);
+const current=num*eased;
 if(text.includes(',')){
-el.textContent = current.toFixed(1).replace('.',',') + suffix;
+el.textContent=current.toFixed(1).replace('.',',')+suffix;
 } else {
-el.textContent = Math.round(current).toLocaleString() + suffix;
+el.textContent=Math.round(current).toLocaleString()+suffix;
 }
-if(progress < 1) requestAnimationFrame(animate);
-else el.textContent = text;
+if(progress<1) requestAnimationFrame(animate);
+else el.textContent=text;
 };
 requestAnimationFrame(animate);
 });
 }
 
-// ===== LIVE PRODUCTION COUNTER =====
+// ===== LIVE COUNTER =====
 function initLiveCounter(){
-const steelEl = document.getElementById('counterSteel');
-const rebarEl = document.getElementById('counterRebar');
-const exportEl = document.getElementById('counterExport');
-const countriesEl = document.getElementById('counterCountries');
+const steelEl=document.getElementById('counterSteel');
+const rebarEl=document.getElementById('counterRebar');
+const exportEl=document.getElementById('counterExport');
+const countriesEl=document.getElementById('counterCountries');
 if(!steelEl) return;
 
-let steel = 1847523;
-let rebar = 2847392000;
-let exp = 623847;
-const countries = 73;
+let steel=1847523;
+let rebar=2847392000;
+let exp=623847;
+const countries=73;
 
-steelEl.textContent = Math.floor(steel).toLocaleString('ru-RU');
-rebarEl.textContent = Math.floor(rebar).toLocaleString('ru-RU');
-exportEl.textContent = Math.floor(exp).toLocaleString('ru-RU');
-countriesEl.textContent = countries;
+steelEl.textContent=Math.floor(steel).toLocaleString('ru-RU');
+rebarEl.textContent=Math.floor(rebar).toLocaleString('ru-RU');
+exportEl.textContent=Math.floor(exp).toLocaleString('ru-RU');
+countriesEl.textContent=countries;
 
 function update(){
-steel += Math.random() * 2.5 + 0.5;
-rebar += Math.random() * 4000 + 1000;
-exp += Math.random() * 0.8 + 0.2;
-
-steelEl.textContent = Math.floor(steel).toLocaleString('ru-RU');
-rebarEl.textContent = Math.floor(rebar).toLocaleString('ru-RU');
-exportEl.textContent = Math.floor(exp).toLocaleString('ru-RU');
-countriesEl.textContent = countries;
+steel+=Math.random()*2.5+0.5;
+rebar+=Math.random()*4000+1000;
+exp+=Math.random()*0.8+0.2;
+steelEl.textContent=Math.floor(steel).toLocaleString('ru-RU');
+rebarEl.textContent=Math.floor(rebar).toLocaleString('ru-RU');
+exportEl.textContent=Math.floor(exp).toLocaleString('ru-RU');
+countriesEl.textContent=countries;
+}
+setInterval(update,100);
 }
 
-setInterval(update, 100);
-}
-
-// ===== SPARKS PARTICLES =====
+// ===== SPARKS =====
 function initSparks(){
-const hero = document.querySelector('.hero');
+const hero=document.querySelector('.hero');
 if(!hero) return;
-const canvas = document.createElement('canvas');
-canvas.style.cssText = 'position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0.6';
+const canvas=document.createElement('canvas');
+canvas.style.cssText='position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0.6';
 hero.appendChild(canvas);
-const ctx = canvas.getContext('2d');
-let w, h, sparks = [];
-
-function resize(){
-w = canvas.width = hero.offsetWidth;
-h = canvas.height = hero.offsetHeight;
-}
+const ctx=canvas.getContext('2d');
+let w,h,sparks=[];
+function resize(){w=canvas.width=hero.offsetWidth;h=canvas.height=hero.offsetHeight}
 resize();
-window.addEventListener('resize', resize);
-
-class Spark {
+window.addEventListener('resize',resize);
+class Spark{
 constructor(){this.reset()}
-reset(){
-this.x = Math.random() * w;
-this.y = h + 10;
-this.vx = (Math.random() - 0.5) * 2;
-this.vy = -(Math.random() * 3 + 2);
-this.life = 1;
-this.decay = Math.random() * 0.02 + 0.01;
-this.size = Math.random() * 2 + 1;
-this.color = Math.random() > 0.5 ? '#f07840' : '#f5c518';
+reset(){this.x=Math.random()*w;this.y=h+10;this.vx=(Math.random()-0.5)*2;this.vy=-(Math.random()*3+2);this.life=1;this.decay=Math.random()*0.02+0.01;this.size=Math.random()*2+1;this.color=Math.random()>0.5?'#f07840':'#f5c518'}
+update(){this.x+=this.vx;this.y+=this.vy;this.vy+=0.05;this.life-=this.decay;if(this.life<=0) this.reset()}
+draw(){ctx.globalAlpha=this.life;ctx.fillStyle=this.color;ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fill();ctx.shadowBlur=10;ctx.shadowColor=this.color}
 }
-update(){
-this.x += this.vx;
-this.y += this.vy;
-this.vy += 0.05;
-this.life -= this.decay;
-if(this.life <= 0) this.reset();
-}
-draw(){
-ctx.globalAlpha = this.life;
-ctx.fillStyle = this.color;
-ctx.beginPath();
-ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-ctx.fill();
-ctx.shadowBlur = 10;
-ctx.shadowColor = this.color;
-}
-}
-
-for(let i = 0; i < 40; i++) sparks.push(new Spark());
-
-function animate(){
-ctx.clearRect(0, 0, w, h);
-ctx.shadowBlur = 0;
-sparks.forEach(s => {s.update(); s.draw()});
-requestAnimationFrame(animate);
-}
+for(let i=0;i<40;i++) sparks.push(new Spark());
+function animate(){ctx.clearRect(0,0,w,h);ctx.shadowBlur=0;sparks.forEach(s=>{s.update();s.draw()});requestAnimationFrame(animate)}
 animate();
 }
 
 // ===== MAGNETIC BUTTONS =====
 function initMagnetic(){
-document.querySelectorAll('.btn-p, .btn-yl, .route-btn').forEach(btn => {
-btn.addEventListener('mousemove', e => {
-const rect = btn.getBoundingClientRect();
-const x = e.clientX - rect.left - rect.width / 2;
-const y = e.clientY - rect.top - rect.height / 2;
-btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+document.querySelectorAll('.btn-p,.btn-yl,.route-btn').forEach(btn=>{
+btn.addEventListener('mousemove',e=>{
+const rect=btn.getBoundingClientRect();
+const x=e.clientX-rect.left-rect.width/2;
+const y=e.clientY-rect.top-rect.height/2;
+btn.style.transform=`translate(${x*0.2}px,${y*0.2}px)`;
 });
-btn.addEventListener('mouseleave', () => {
-btn.style.transform = 'translate(0, 0)';
-});
+btn.addEventListener('mouseleave',()=>{btn.style.transform='translate(0,0)'});
 });
 }
 
-// ===== PRODUCTION CYCLE =====
+// ===== CYCLE =====
 function initCycle(){
-const steps = document.querySelectorAll('.cycle-step');
-const detail = document.getElementById('cycleDetail');
-if(!steps.length || !detail) return;
-
-const data = {
-1:{title:'Электродуговая плавка', desc:'Шихта загружается в печь «Данарк» мощностью 70 тонн. Температура плавления достигает 1600°C. Процесс занимает около 45 минут. Используется 100% металлолом.'},
-2:{title:'Непрерывная разливка', desc:'Расплавленная сталь разливается в кристаллизаторы, формируя заготовки сечением 150×150 мм. Скорость разливки — до 3 м/мин.'},
-3:{title:'Горячая прокатка', desc:'Заготовки нагреваются до 1200°C и проходят через сортопрокатный стан «370». Формируется готовый профиль нужного сечения.'},
-4:{title:'Резка и контроль', desc:'Прокат нарезается на мерные длины 6–12 м. Каждая партия проходит контроль качества в лаборатории ОТК.'},
-5:{title:'Упаковка и отгрузка', desc:'Готовая продукция маркируется, упаковывается в пачки и отгружается железнодорожным или автомобильным транспортом.'}
+const steps=document.querySelectorAll('.cycle-step');
+const detail=document.getElementById('cycleDetail');
+if(!steps.length||!detail) return;
+const data={
+1:{title:t('cycle1_title'),desc:t('cycle1_desc')},
+2:{title:t('cycle2_title'),desc:t('cycle2_desc')},
+3:{title:t('cycle3_title'),desc:t('cycle3_desc')},
+4:{title:t('cycle4_title'),desc:t('cycle4_desc')},
+5:{title:t('cycle5_title'),desc:t('cycle5_desc')}
 };
-
-steps.forEach(step => {
-step.addEventListener('click', () => {
-steps.forEach(s => s.classList.remove('active'));
+steps.forEach(step=>{
+step.addEventListener('click',()=>{
+steps.forEach(s=>s.classList.remove('active'));
 step.classList.add('active');
-const id = step.dataset.step;
-document.getElementById('cycleTitle').textContent = data[id].title;
-document.getElementById('cycleDesc').textContent = data[id].desc;
-detail.style.animation = 'none';
+const id=step.dataset.step;
+document.getElementById('cycleTitle').textContent=data[id].title;
+document.getElementById('cycleDesc').textContent=data[id].desc;
+detail.style.animation='none';
 detail.offsetHeight;
-detail.style.animation = 'fadeUp 0.4s ease';
+detail.style.animation='fadeUp 0.4s ease';
 });
 });
 }
 
-// ===== GLOW FOLLOW MOUSE =====
+// ===== GLOW =====
 function initGlow(){
-document.querySelectorAll('.prod-card, .news-card, .info-block').forEach(card => {
-card.addEventListener('mousemove', e => {
-const rect = card.getBoundingClientRect();
-const x = ((e.clientX - rect.left) / rect.width) * 100;
-const y = ((e.clientY - rect.top) / rect.height) * 100;
-card.style.setProperty('--mouse-x', x + '%');
-card.style.setProperty('--mouse-y', y + '%');
+document.querySelectorAll('.prod-card,.news-card,.info-block').forEach(card=>{
+card.addEventListener('mousemove',e=>{
+const rect=card.getBoundingClientRect();
+card.style.setProperty('--mouse-x',((e.clientX-rect.left)/rect.width)*100+'%');
+card.style.setProperty('--mouse-y',((e.clientY-rect.top)/rect.height)*100+'%');
 });
 });
 }
 
 // ===== PLANT MAP =====
 function initPlantMap(){
-const objects = document.querySelectorAll('.plant-object');
-const tooltip = document.getElementById('plantTooltip');
-const mapContainer = document.querySelector('.plant-map');
-if(!objects.length || !tooltip || !mapContainer) return;
-
-objects.forEach(obj => {
-obj.addEventListener('mouseenter', e => {
-const name = obj.getAttribute('data-name');
-const desc = obj.getAttribute('data-desc');
-tooltip.innerHTML = `<strong>${name}</strong>${desc}`;
+const objects=document.querySelectorAll('.plant-object');
+const tooltip=document.getElementById('plantTooltip');
+const mapContainer=document.querySelector('.plant-map');
+if(!objects.length||!tooltip||!mapContainer) return;
+objects.forEach(obj=>{
+obj.addEventListener('mouseenter',()=>{
+tooltip.innerHTML='<strong>'+obj.getAttribute('data-name')+'</strong>'+obj.getAttribute('data-desc');
 tooltip.classList.add('show');
 });
-obj.addEventListener('mousemove', e => {
-const rect = mapContainer.getBoundingClientRect();
-tooltip.style.left = (e.clientX - rect.left + 15) + 'px';
-tooltip.style.top = (e.clientY - rect.top - 30) + 'px';
+obj.addEventListener('mousemove',e=>{
+const rect=mapContainer.getBoundingClientRect();
+tooltip.style.left=(e.clientX-rect.left+15)+'px';
+tooltip.style.top=(e.clientY-rect.top-30)+'px';
 });
-obj.addEventListener('mouseleave', () => {
-tooltip.classList.remove('show');
-});
+obj.addEventListener('mouseleave',()=>{tooltip.classList.remove('show')});
 });
 }
 
-// ===== WORLD MAP TOOLTIP =====
+// ===== WORLD MAP =====
 function initWorldMap(){
-const dots = document.querySelectorAll('.map-dot, .map-dot-home');
-const tooltip = document.getElementById('mapTooltip');
-const mapContainer = document.querySelector('.world-map');
-if(!dots.length || !tooltip || !mapContainer) return;
-
-dots.forEach(dot => {
-dot.addEventListener('mouseenter', e => {
-const country = dot.getAttribute('data-country');
-tooltip.textContent = country;
+const dots=document.querySelectorAll('.map-dot,.map-dot-home');
+const tooltip=document.getElementById('mapTooltip');
+const mapContainer=document.querySelector('.world-map');
+if(!dots.length||!tooltip||!mapContainer) return;
+dots.forEach(dot=>{
+dot.addEventListener('mouseenter',()=>{
+tooltip.textContent=dot.getAttribute('data-country');
 tooltip.classList.add('show');
 });
-dot.addEventListener('mousemove', e => {
-const rect = mapContainer.getBoundingClientRect();
-tooltip.style.left = (e.clientX - rect.left + 15) + 'px';
-tooltip.style.top = (e.clientY - rect.top - 30) + 'px';
+dot.addEventListener('mousemove',e=>{
+const rect=mapContainer.getBoundingClientRect();
+tooltip.style.left=(e.clientX-rect.left+15)+'px';
+tooltip.style.top=(e.clientY-rect.top-30)+'px';
 });
-dot.addEventListener('mouseleave', () => {
-tooltip.classList.remove('show');
-});
+dot.addEventListener('mouseleave',()=>{tooltip.classList.remove('show')});
 });
 }
 
-// ===== AWARDS CAROUSEL =====
-let carouselPos = 0;
+// ===== CAROUSEL =====
+let carouselPos=0;
 function moveCarousel(dir){
-const track = document.getElementById('carouselTrack');
+const track=document.getElementById('carouselTrack');
 if(!track) return;
-const cardWidth = 300;
-const maxPos = track.children.length - Math.floor(track.parentElement.offsetWidth / cardWidth);
-carouselPos = Math.max(0, Math.min(carouselPos + dir, maxPos));
-track.style.transform = `translateX(-${carouselPos * cardWidth}px)`;
+const cardWidth=324;
+const maxPos=track.children.length-Math.floor(track.parentElement.offsetWidth/cardWidth);
+carouselPos=Math.max(0,Math.min(carouselPos+dir,maxPos));
+track.style.transform=`translateX(-${carouselPos*cardWidth}px)`;
 }
 
 // ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
-renderHeader();
-renderFooter();
+document.addEventListener('DOMContentLoaded',()=>{
+applyLang();
 initReveal();
 initSparks();
 initMagnetic();
@@ -584,40 +664,16 @@ initPlantMap();
 initWorldMap();
 initLiveCounter();
 
-setTimeout(() => {
-const preloader = document.querySelector('.preloader');
+setTimeout(()=>{
+const preloader=document.querySelector('.preloader');
 if(preloader) preloader.classList.add('hidden');
-}, 500);
+},500);
 
-const statsObserver = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-animateCounters();
-statsObserver.disconnect();
-}
+const statsObserver=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){animateCounters();statsObserver.disconnect()}
 });
-}, {threshold: 0.3});
-const statsEl = document.querySelector('.stats');
+},{threshold:0.3});
+const statsEl=document.querySelector('.stats');
 if(statsEl) statsObserver.observe(statsEl);
-});
-// ===== МОБИЛЬНОЕ МЕНЮ =====
-function toggleMobileMenu(){
-    const nav = document.getElementById('nav');
-    const burger = document.getElementById('burgerMenu');
-    if(nav && burger){
-        nav.classList.toggle('mobile-open');
-        burger.classList.toggle('active');
-    }
-}
-
-// Закрыть меню при клике на ссылку
-document.addEventListener('click', e => {
-    if(e.target.closest('.nav-link')){
-        const nav = document.getElementById('nav');
-        const burger = document.getElementById('burgerMenu');
-        if(nav && nav.classList.contains('mobile-open')){
-            nav.classList.remove('mobile-open');
-            burger.classList.remove('active');
-        }
-    }
 });
