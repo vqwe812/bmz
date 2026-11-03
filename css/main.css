@@ -452,3 +452,21 @@ ul{list-style:none}
 .counter-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:380px){.stat{padding:20px 12px}.stat-n{font-size:1.6rem}.stat-l{font-size:.7rem}}
+/* Бургер-меню (скрыто на десктопе) */
+.burger-menu{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    padding:8px;
+    z-index:1001;
+}
+.burger-menu span{
+    width:24px;
+    height:2px;
+    background:var(--wh);
+    transition:.3s;
+}
+.burger-menu.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger-menu.active span:nth-child(2){opacity:0}
+.burger-menu.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
