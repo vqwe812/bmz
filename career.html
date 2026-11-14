@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Персонал — ОАО «БМЗ»</title>
+<link rel="icon" type="image/png" href="images/bmz-logo.png">
+<link rel="shortcut icon" href="images/bmz-logo.png">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="career">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="preloader"><div class="preloader-spinner"></div></div>
+
+<header class="hdr" id="hdr"></header>
+
+<main id="app"></main>
+
+<!-- МОДАЛЬНОЕ ОКНО АНКЕТЫ -->
+<div class="application-modal" id="applicationModal">
+<div class="application-modal-content">
+<button class="application-modal-close" onclick="closeApplication()">✕</button>
+<div class="application-header">
+<h2 id="applicationTitle">Резюме соискателя</h2>
+<p id="applicationPosition"></p>
+</div>
+<form class="application-form" id="applicationForm" onsubmit="submitApplication(event)">
+<div class="application-grid">
+<div class="application-photo">
+<label>Фотография</label>
+<div class="photo-upload" onclick="document.getElementById('photoInput').click()">
+<span id="photoLabel">Нажмите для загрузки файла<br>jpg, jpeg, bmp, gif, png (до 1 Мб)</span>
+<input type="file" id="photoInput" accept="image/*" style="display:none" onchange="handlePhoto(this)">
+</div>
+</div>
+<div class="application-fields">
+<div class="fg"><label>Фамилия, Имя, Отчество:</label><input required placeholder="Фамилия Имя Отчество"></div>
+<div class="fg"><label>Дата рождения:</label><input type="date" required></div>
+<div class="fg"><label>Семейное положение:</label><select><option>Выберите</option><option>Не женат/Не замужем</option><option>Женат/Замужем</option><option>Разведён/а</option></select></div>
+<div class="fg"><label>Служба в вооружённых силах:</label><select><option>Выберите</option><option>Проходил</option><option>Не проходил</option></select></div>
+</div>
+<div class="application-fields">
+<div class="fg"><label>Телефон:</label><input required placeholder="+375 (__) ___-__-__"></div>
+<div class="fg"><label>Email-адрес:</label><input type="email" required placeholder="Email-адрес"></div>
+<div class="fg"><label>Адрес проживания:</label><textarea rows="3" placeholder="Адрес проживания"></textarea></div>
+</div>
+</div>
+<div class="fg full-width"><label>Образование:</label><textarea rows="4" placeholder="год окончания, форма обучения, учреждение образования, специальность по диплому, квалификация по диплому, знание иностранных языков"></textarea></div>
+<div class="fg full-width"><label>Должность, на которую претендует кандидат:</label><textarea rows="3" placeholder="Должность, на которую претендует кандидат, ожидаемая заработная плата"></textarea></div>
+<div class="fg full-width"><label>Опыт работы:</label><textarea rows="4" placeholder="период работы, место работы, должность"></textarea></div>
+<div class="fg full-width"><label>Прочее:</label><textarea rows="4" placeholder="Дополнительная информация о себе"></textarea></div>
+<div class="captcha-block">
+<div class="captcha-image">ulhQ</div>
+<button type="button" class="captcha-refresh" onclick="refreshCaptcha()">🔄</button>
+<div class="fg" style="margin:0;flex:1"><label>Введите код с картинки:</label><input required placeholder="Введите код с картинки" id="captchaInput"></div>
+</div>
+<button type="submit" class="btn btn-p" style="width:100%;justify-content:center;padding:16px">Отправить анкету</button>
+<div class="form-success" id="applicationSuccess">✓ Анкета отправлена! Мы свяжемся с вами в ближайшее время.</div>
+</form>
+</div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО НОВОСТЕЙ -->
+<div class="news-modal" id="newsModal" onclick="if(event.target===this)closeNewsModal()">
+<div class="news-modal-content">
+<button class="news-modal-close" onclick="closeNewsModal()">✕</button>
+<div class="news-modal-img" id="newsModalImg"></div>
+<div class="news-modal-body">
+<div class="news-modal-cat" id="newsModalCat"></div>
+<div class="news-modal-date" id="newsModalDate"></div>
+<h2 id="newsModalTitle"></h2>
+<div class="text" id="newsModalText"></div>
+</div>
+</div>
+</div>
+
+<!-- КНОПКА НАВЕРХ -->
+<button class="back-top" id="backTop" onclick="scrollToTop()">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ФУТЕР -->
+<footer class="ftr" id="footer"></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

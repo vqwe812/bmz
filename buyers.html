@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Покупателю — ОАО «БМЗ»</title>
+<link rel="icon" type="image/png" href="images/bmz-logo.png">
+<link rel="shortcut icon" href="images/bmz-logo.png">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="buyers">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="preloader"><div class="preloader-spinner"></div></div>
+
+<header class="hdr" id="hdr"></header>
+
+<main id="app"></main>
+
+<div class="news-modal" id="newsModal" onclick="if(event.target===this)closeNewsModal()">
+<div class="news-modal-content">
+<button class="news-modal-close" onclick="closeNewsModal()">✕</button>
+<div class="news-modal-img" id="newsModalImg"></div>
+<div class="news-modal-body">
+<div class="news-modal-cat" id="newsModalCat"></div>
+<div class="news-modal-date" id="newsModalDate"></div>
+<h2 id="newsModalTitle"></h2>
+<div class="text" id="newsModalText"></div>
+</div>
+</div>
+</div>
+
+<button class="back-top" id="backTop" onclick="scrollToTop()">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<footer class="ftr" id="footer"></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
